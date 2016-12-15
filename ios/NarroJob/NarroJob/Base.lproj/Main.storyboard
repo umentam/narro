@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,31 +19,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N6N-Wk-3KV">
-                                <frame key="frameInset" minX="54" minY="307" width="197" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="narro_fulllogo_filled" translatesAutoresizingMaskIntoConstraints="NO" id="7V7-jV-b55">
-                                <frame key="frameInset" minX="86" minY="121" width="196" height="149"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="narro_fulllogo_filled" translatesAutoresizingMaskIntoConstraints="NO" id="7V7-jV-b55">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="I7i-Hu-Iow"/>
+                                    <constraint firstAttribute="width" constant="196" id="hMp-5F-vmx"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-Vd-H4Y">
-                                <frame key="frameInset" minX="154" minY="386" width="61" height="57"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z2h-nV-FQg">
+                                <frame key="frameInset" minX="23" minY="257" width="336" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4Q-He-l6y">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="He2-jY-zpb"/>
+                                            <constraint firstAttribute="width" constant="336" id="dbi-jX-SHJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIm-jq-B74">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3QO-Nd-Nd5"/>
+                                            <constraint firstAttribute="width" constant="280" id="zP8-Bx-x4U"/>
+                                        </constraints>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-Vd-H4Y">
                                 <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="BjU-dA-EiN"/>
+                                    <constraint firstAttribute="height" constant="57" id="zXb-eh-YEL"/>
+                                </constraints>
                                 <state key="normal" title="Go!" image="narro_smalllogo">
                                     <color key="titleColor" red="0.96409937349999997" green="0.95755464700000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GLx-1C-Vre">
+                                <frame key="frameInset" minX="23" minY="343" width="336" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry Pref: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAb-Qi-lTV">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="336" id="9W9-Yu-CZJ"/>
+                                            <constraint firstAttribute="height" constant="28" id="aew-7Z-d6u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PP9-F1-TO1">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="Age-aj-SiA"/>
+                                            <constraint firstAttribute="height" constant="50" id="mtA-um-6mk"/>
+                                        </constraints>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aYo-jK-keM">
+                                <frame key="frameInset" minX="23" minY="429" width="336" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Pref: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhW-7x-neh">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="2D1-f9-Qe6"/>
+                                            <constraint firstAttribute="width" constant="336" id="UlZ-42-J63"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wiu-08-kLo">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="2r1-Bz-zIG"/>
+                                            <constraint firstAttribute="height" constant="50" id="q4b-yN-hfZ"/>
+                                        </constraints>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.84414491619999998" green="0.90238160069999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WhW-7x-neh" firstAttribute="leading" secondItem="zhm-eO-V9A" secondAttribute="leadingMargin" constant="7" id="B02-AT-uyC"/>
+                            <constraint firstItem="7V7-jV-b55" firstAttribute="centerX" secondItem="zhm-eO-V9A" secondAttribute="centerX" id="Bz7-8z-biz"/>
+                            <constraint firstItem="ec8-Vd-H4Y" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="513" id="DvO-ys-tXv"/>
+                            <constraint firstItem="lAb-Qi-lTV" firstAttribute="leading" secondItem="zhm-eO-V9A" secondAttribute="leadingMargin" constant="7" id="FUW-k1-ZGR"/>
+                            <constraint firstItem="ec8-Vd-H4Y" firstAttribute="centerX" secondItem="zhm-eO-V9A" secondAttribute="centerX" id="Ivu-bw-9sJ"/>
+                            <constraint firstItem="B4Q-He-l6y" firstAttribute="leading" secondItem="zhm-eO-V9A" secondAttribute="leadingMargin" constant="7" id="Mah-5K-KUT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7V7-jV-b55" secondAttribute="trailing" constant="74" id="eXo-dd-QAU"/>
+                            <constraint firstItem="B4Q-He-l6y" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="237" id="hAO-SO-3r9"/>
+                            <constraint firstItem="7V7-jV-b55" firstAttribute="leading" secondItem="zhm-eO-V9A" secondAttribute="leadingMargin" constant="73" id="n7K-fW-JTl"/>
+                            <constraint firstItem="lAb-Qi-lTV" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="323" id="prO-qS-wJ1"/>
+                            <constraint firstItem="WhW-7x-neh" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="409" id="shR-YV-thb"/>
+                            <constraint firstItem="7V7-jV-b55" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="80" id="tZR-dg-rbj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="indPicker" destination="PP9-F1-TO1" id="MTx-gm-MnM"/>
+                        <outlet property="indPreferenceLabel" destination="lAb-Qi-lTV" id="TCE-xg-KNX"/>
+                        <outlet property="jobLabel" destination="WhW-7x-neh" id="UJr-hA-ZHL"/>
+                        <outlet property="jobPicker" destination="wiu-08-kLo" id="1zG-cA-GJm"/>
+                        <outlet property="majorLabel" destination="B4Q-He-l6y" id="R2L-Nd-B25"/>
+                        <outlet property="majorPicker" destination="jIm-jq-B74" id="E0f-21-SRh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U72-Lj-WrN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2" y="83"/>
+            <point key="canvasLocation" x="0.80000000000000004" y="82.3088455772114"/>
         </scene>
     </scenes>
     <resources>
