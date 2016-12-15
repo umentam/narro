@@ -16,16 +16,37 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var majorPicker: UIPickerView!
     @IBOutlet weak var indPicker: UIPickerView!
     @IBOutlet weak var jobPicker: UIPickerView!
+    
+    var studentMajor: String!
+    var studentInd: String!
+    var studentJob: String!
+    
+    //MARK: Picker Data
     let majorPickerData = ["Biomedical Engineering", "Computer Science", "Economics"]
+    
+    // Industry Preferences
+    var indData = [String]()
+    let indDataBME = ["Research", "Environment", "Biochemical/Biomedical", "Entrepreneurship"]
+    let indDataCS = ["Research", "Entrepreneurship", "Electronics", "Tech Info Systems"]
+    let indDataEcon = ["Environment", "Entrepreneurship", "Investment Banking", "Venture Capatalism"]
+    
+    // Job Preferences
+    var jobData = [String]()
+    let jobDataBME = ["Engineering", "Healthcare/Health Services", "Research"]
+    let jobDataCS = ["Hardware/Software", "Engineering", "Web Dev"]
+    let jobDataEcon = ["Consulting", "Finance", "Project Management"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //let gradient: CAGradientLayer = CAGradientLayer()
-        //gradient.frame = self.view.bounds
-        //gradient.colors = [UIColor.white.cgColor, UIColor.gray.cgColor]
-        //self.view.layer.insertSublayer(gradient, at: 0)
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = self.view.bounds
+        gradient.colors = [UIColor.white.cgColor, UIColor.gray.cgColor]
+        self.view.layer.insertSublayer(gradient, at: 0)
         setupPicker(picker: majorPicker)
+        setupPicker(picker: indPicker)
+        setupPicker(picker: jobPicker)
+        self.changeIndandJobPreferences(major: "Biomedical Engineering")
         
     }
 
@@ -45,16 +66,65 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return majorPickerData.count
+        if (pickerView.tag == 1){
+            return majorPickerData.count
+        }
+        else if (pickerView.tag == 2){
+            return indData.count
+        }
+        else {
+            return jobData.count
+        }
     }
     
     //MARK: Delegates
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return majorPickerData[row]
+        if (pickerView.tag == 1){
+            return majorPickerData[row]
+        }
+        else if (pickerView.tag == 2){
+            return indData[row]
+        }
+        else {
+            return jobData[row]
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        majorLabel.text = "Major: " + majorPickerData[row]
+        if (pickerView.tag == 1){
+            let major = majorPickerData[row]
+            majorLabel.text = "Major: " + major
+            studentMajor = major
+            changeIndandJobPreferences(major: major)
+        }
+        else if (pickerView.tag == 2){
+            let pref = indData[row]
+            indPreferenceLabel.text  = "Ind Pref: " + pref
+            studentInd = pref
+        }
+        else {
+            let pref = jobData[row]
+            jobLabel.text = "Job Pref: " + pref
+            studentJob = pref
+        }
+        print ("Major: " + studentMajor + " Ind: " + studentInd + "Job: " + studentJob)
+    }
+    
+    func changeIndandJobPreferences (major: String){
+        if (major == "Biomedical Engineering"){
+            indData = indDataBME
+            jobData = jobDataBME
+        }
+        else if (major == "Computer Science"){
+            indData = indDataCS
+            jobData = jobDataCS
+        }
+        else {
+            indData = indDataEcon
+            jobData = jobDataEcon
+        }
+        indPicker.reloadAllComponents()
+        jobPicker.reloadAllComponents()
     }
 
 
