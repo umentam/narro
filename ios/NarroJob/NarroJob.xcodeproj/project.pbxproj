@@ -29,6 +29,7 @@
 /* Begin PBXFileReference section */
 		DD96FF381E03597700412AC9 /* NarroJob-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NarroJob-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD96FF391E03597800412AC9 /* JobClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JobClassifier.m; path = ../JobClassifier.m; sourceTree = "<group>"; };
+		DD96FF3B1E035A4900412AC9 /* JobClassifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobClassifier.h; sourceTree = "<group>"; };
 		DDBB2AD51E02455A0074F0DD /* NarroJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NarroJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBB2AD81E02455A0074F0DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBB2ADA1E02455A0074F0DD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 				DDBB2ADF1E02455A0074F0DD /* Assets.xcassets */,
 				DDBB2AE11E02455A0074F0DD /* LaunchScreen.storyboard */,
 				DDBB2AE41E02455A0074F0DD /* Info.plist */,
+				DD96FF3B1E035A4900412AC9 /* JobClassifier.h */,
 			);
 			path = NarroJob;
 			sourceTree = "<group>";
