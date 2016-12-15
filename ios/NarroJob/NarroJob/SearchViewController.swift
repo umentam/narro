@@ -13,9 +13,16 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var majorLabel: UILabel!
     @IBOutlet weak var indPreferenceLabel: UILabel!
     @IBOutlet weak var jobLabel: UILabel!
+    
     @IBOutlet weak var majorPicker: UIPickerView!
     @IBOutlet weak var indPicker: UIPickerView!
     @IBOutlet weak var jobPicker: UIPickerView!
+    
+    @IBOutlet weak var industryStack: UIStackView!
+    @IBOutlet weak var jobStack: UIStackView!
+    
+    @IBOutlet weak var gpaTextField: UITextField!
+    
     
     var studentMajor: String!
     var studentInd: String!
@@ -93,21 +100,23 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView.tag == 1){
             let major = majorPickerData[row]
-            majorLabel.text = "Major: " + major
+            //majorLabel.text = "Major: " + major
             studentMajor = major
             changeIndandJobPreferences(major: major)
+            industryStack.isHidden = false
         }
         else if (pickerView.tag == 2){
             let pref = indData[row]
-            indPreferenceLabel.text  = "Ind Pref: " + pref
+            //indPreferenceLabel.text  = "Ind Pref: " + pref
             studentInd = pref
+            jobStack.isHidden = false
         }
         else {
             let pref = jobData[row]
-            jobLabel.text = "Job Pref: " + pref
+            //jobLabel.text = "Job Pref: " + pref
             studentJob = pref
+            gpaTextField.isHidden = false
         }
-        print ("Major: " + studentMajor + " Ind: " + studentInd + "Job: " + studentJob)
     }
     
     func changeIndandJobPreferences (major: String){
@@ -125,8 +134,15 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         }
         indPicker.reloadAllComponents()
         jobPicker.reloadAllComponents()
+        
     }
 
+    @IBAction func sendData(_ sender: AnyObject) {
+        let gpa = gpaTextField.text
+        let credentials = "Major: " + studentMajor + " Ind: " + studentInd + " Job: " + studentJob
+        print (credentials)
+        print ("GPA: " + gpa!)
+    }
 
 }
 

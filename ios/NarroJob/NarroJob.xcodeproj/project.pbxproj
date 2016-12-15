@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD96FF3A1E03597800412AC9 /* JobClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = DD96FF391E03597800412AC9 /* JobClassifier.m */; };
 		DDBB2AD91E02455A0074F0DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBB2AD81E02455A0074F0DD /* AppDelegate.swift */; };
 		DDBB2ADB1E02455A0074F0DD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBB2ADA1E02455A0074F0DD /* SearchViewController.swift */; };
 		DDBB2ADE1E02455A0074F0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBB2ADC1E02455A0074F0DD /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD96FF381E03597700412AC9 /* NarroJob-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NarroJob-Bridging-Header.h"; sourceTree = "<group>"; };
+		DD96FF391E03597800412AC9 /* JobClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JobClassifier.m; path = ../JobClassifier.m; sourceTree = "<group>"; };
 		DDBB2AD51E02455A0074F0DD /* NarroJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NarroJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBB2AD81E02455A0074F0DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBB2ADA1E02455A0074F0DD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 				DDBB2AD71E02455A0074F0DD /* NarroJob */,
 				DDBB2AEC1E02455B0074F0DD /* NarroJobTests */,
 				DDBB2AD61E02455A0074F0DD /* Products */,
+				DD96FF381E03597700412AC9 /* NarroJob-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +81,7 @@
 		DDBB2AD71E02455A0074F0DD /* NarroJob */ = {
 			isa = PBXGroup;
 			children = (
+				DD96FF391E03597800412AC9 /* JobClassifier.m */,
 				DDBB2AD81E02455A0074F0DD /* AppDelegate.swift */,
 				DDBB2ADA1E02455A0074F0DD /* SearchViewController.swift */,
 				DDBB2ADC1E02455A0074F0DD /* Main.storyboard */,
@@ -146,6 +151,7 @@
 				TargetAttributes = {
 					DDBB2AD41E02455A0074F0DD = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					DDBB2AE81E02455B0074F0DD = {
@@ -200,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDBB2ADB1E02455A0074F0DD /* SearchViewController.swift in Sources */,
+				DD96FF3A1E03597800412AC9 /* JobClassifier.m in Sources */,
 				DDBB2AD91E02455A0074F0DD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,10 +344,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NarroJob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = languages.NarroJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NarroJob-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -349,10 +359,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NarroJob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = languages.NarroJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NarroJob-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -404,6 +416,7 @@
 				DDBB2AF41E02455B0074F0DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDBB2AF51E02455B0074F0DD /* Build configuration list for PBXNativeTarget "NarroJobTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +425,7 @@
 				DDBB2AF71E02455B0074F0DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -35,7 +35,7 @@
                                             <constraint firstAttribute="width" constant="336" id="dbi-jX-SHJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIm-jq-B74">
@@ -46,27 +46,17 @@
                                     </pickerView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-Vd-H4Y">
-                                <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="BjU-dA-EiN"/>
-                                    <constraint firstAttribute="height" constant="57" id="zXb-eh-YEL"/>
-                                </constraints>
-                                <state key="normal" title="Go!" image="narro_smalllogo">
-                                    <color key="titleColor" red="0.96409937349999997" green="0.95755464700000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GLx-1C-Vre">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GLx-1C-Vre">
                                 <frame key="frameInset" minX="23" minY="343" width="336" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry Pref: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAb-Qi-lTV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry Preference: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAb-Qi-lTV">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="336" id="9W9-Yu-CZJ"/>
                                             <constraint firstAttribute="height" constant="28" id="aew-7Z-d6u"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PP9-F1-TO1">
@@ -77,17 +67,17 @@
                                     </pickerView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aYo-jK-keM">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aYo-jK-keM">
                                 <frame key="frameInset" minX="23" minY="429" width="336" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Pref: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhW-7x-neh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Prefence: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhW-7x-neh">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="2D1-f9-Qe6"/>
                                             <constraint firstAttribute="width" constant="336" id="UlZ-42-J63"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wiu-08-kLo">
@@ -98,17 +88,39 @@
                                     </pickerView>
                                 </subviews>
                             </stackView>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GPA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKm-0i-mh0">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-Vd-H4Y">
+                                <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="BjU-dA-EiN"/>
+                                    <constraint firstAttribute="height" constant="57" id="zXb-eh-YEL"/>
+                                </constraints>
+                                <state key="normal" title="Go!" image="narro_smalllogo_filled">
+                                    <color key="titleColor" red="0.96409937349999997" green="0.95755464700000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendData:" destination="Abd-wE-wCl" eventType="touchUpInside" id="6OB-Ys-gFJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.84414491619999998" green="0.90238160069999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WhW-7x-neh" firstAttribute="leading" secondItem="zhm-eO-V9A" secondAttribute="leadingMargin" constant="7" id="B02-AT-uyC"/>
                             <constraint firstItem="7V7-jV-b55" firstAttribute="centerX" secondItem="zhm-eO-V9A" secondAttribute="centerX" id="Bz7-8z-biz"/>
-                            <constraint firstItem="ec8-Vd-H4Y" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="513" id="DvO-ys-tXv"/>
+                            <constraint firstItem="ec8-Vd-H4Y" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="556" id="DvO-ys-tXv"/>
                             <constraint firstItem="lAb-Qi-lTV" firstAttribute="leading" secondItem="zhm-eO-V9A" secondAttribute="leadingMargin" constant="7" id="FUW-k1-ZGR"/>
+                            <constraint firstItem="gKm-0i-mh0" firstAttribute="leading" secondItem="zhm-eO-V9A" secondAttribute="leadingMargin" constant="123" id="GU1-HH-hSj"/>
                             <constraint firstItem="ec8-Vd-H4Y" firstAttribute="centerX" secondItem="zhm-eO-V9A" secondAttribute="centerX" id="Ivu-bw-9sJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gKm-0i-mh0" secondAttribute="trailing" constant="123" id="L8m-Xz-dvA"/>
                             <constraint firstItem="B4Q-He-l6y" firstAttribute="leading" secondItem="zhm-eO-V9A" secondAttribute="leadingMargin" constant="7" id="Mah-5K-KUT"/>
+                            <constraint firstItem="gKm-0i-mh0" firstAttribute="centerX" secondItem="zhm-eO-V9A" secondAttribute="centerX" id="Ze6-fB-yw3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7V7-jV-b55" secondAttribute="trailing" constant="74" id="eXo-dd-QAU"/>
                             <constraint firstItem="B4Q-He-l6y" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="237" id="hAO-SO-3r9"/>
+                            <constraint firstItem="gKm-0i-mh0" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="505" id="kOh-RW-0qJ"/>
                             <constraint firstItem="7V7-jV-b55" firstAttribute="leading" secondItem="zhm-eO-V9A" secondAttribute="leadingMargin" constant="73" id="n7K-fW-JTl"/>
                             <constraint firstItem="lAb-Qi-lTV" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="323" id="prO-qS-wJ1"/>
                             <constraint firstItem="WhW-7x-neh" firstAttribute="top" secondItem="Qwa-eb-hvE" secondAttribute="bottom" constant="409" id="shR-YV-thb"/>
@@ -116,10 +128,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gpaTextField" destination="gKm-0i-mh0" id="76l-9U-ZnX"/>
                         <outlet property="indPicker" destination="PP9-F1-TO1" id="MTx-gm-MnM"/>
                         <outlet property="indPreferenceLabel" destination="lAb-Qi-lTV" id="TCE-xg-KNX"/>
+                        <outlet property="industryStack" destination="GLx-1C-Vre" id="s0H-vq-kSh"/>
                         <outlet property="jobLabel" destination="WhW-7x-neh" id="UJr-hA-ZHL"/>
                         <outlet property="jobPicker" destination="wiu-08-kLo" id="1zG-cA-GJm"/>
+                        <outlet property="jobStack" destination="aYo-jK-keM" id="37I-Lc-ddk"/>
                         <outlet property="majorLabel" destination="B4Q-He-l6y" id="R2L-Nd-B25"/>
                         <outlet property="majorPicker" destination="jIm-jq-B74" id="E0f-21-SRh"/>
                     </connections>
@@ -131,6 +146,6 @@
     </scenes>
     <resources>
         <image name="narro_fulllogo_filled" width="413" height="261"/>
-        <image name="narro_smalllogo" width="238" height="226"/>
+        <image name="narro_smalllogo_filled" width="237" height="223"/>
     </resources>
 </document>
